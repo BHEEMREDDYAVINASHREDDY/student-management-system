@@ -89,7 +89,7 @@ const Login = () => {
         </p>
 
         <div className="mt-6 rounded-lg border border-dashed border-gray-300 p-3 text-xs text-gray-500 dark:border-gray-700 dark:text-gray-400">
-          Demo admin: <code>admin@srms.local</code> / <code>Admin@123</code> (after running{' '}
+          Demo admin: <code>admin@srms.local.com</code> / <code>Admin@123</code> (after running{' '}
           <code>npm run seed</code> in the backend)
         </div>
       </div>

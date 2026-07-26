@@ -3,20 +3,20 @@
 // is usable immediately after a fresh clone. Run with: npm run seed
 require('dotenv').config();
 const mongoose = require('mongoose');
-const config = require('../config/config');
+const connectDB = require('../config/db');
 const User = require('../models/User');
 const Department = require('../models/Department');
 const Course = require('../models/Course');
 const Semester = require('../models/Semester');
 
 const run = async () => {
-  await mongoose.connect(config.mongoUri);
+  await connectDB();
 
   const existingAdmin = await User.findOne({ role: 'admin' });
   if (!existingAdmin) {
     await User.create({
       name: 'System Admin',
-      email: 'admin@srms.local',
+      email: 'admin@srms.local.com',
       password: 'Admin@123',
       role: 'admin',
     });
